@@ -1,0 +1,52 @@
+html{
+    background-color: #121212;
+    color: aliceblue;
+}
+body{
+    background-color: #121212;
+    color: aliceblue;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+h2{
+    text-align: center;
+}
+/*
+#3{
+    text-align: center;
+}
+.navbar{
+    background-color:honeydew;
+}
+.container{
+    justify-content: center;
+    padding: auto;
+}
+.roles{
+    justify-content: center;
+    padding: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: crimson;
+    text-align: center;
+    color: whitesmoke;
+} */
+/* .table{
+    background-color:burlywood;
+}
+.duelist{
+    background-color: #ef476f;
+    color: white;
+}
+.initiator{
+    background-color: #229de0;
+    color: white;
+}
+.controller{
+    background-color: #af63cf;
+    color: white;
+}
+.sentinal{
+    background-color: #b0f2b4;
+    color: white;
+} */

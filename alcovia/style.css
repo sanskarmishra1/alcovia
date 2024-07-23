@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+.navbar{
+    background-color: #224944;
+    height: 64px;
+}
+
+
+.navbar-brand img {
+    height: 75px;
+  }
+.video-background {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .overlay {
+    height: 100%;
+    padding-left: 10px;
+
+  }
+  .left-text {
+    position: relative;
+    color: white;
+    font-size: 6rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: rgba(34, 73, 68, 0.5);
+  }
+  
+  .program-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .program-button {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+  }
+  .program-button img {
+    margin-right: 10px;
+  }
+  .program-icon {
+    display: flex;
+    width: 110px;
+    height: 110px;
+    background: #D3AF35;
+    padding: 18px;
+    border-radius: 50%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+  .program-icon>img{
+    background-repeat:no-repeat;
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+
+  }
+  .margin_programbuttons{
+    padding-right: 90px;
+  }
+  
+  .programs .card {
+    border: none;
+    margin-bottom: 30px;
+  }
+  
+  h2{
+    color:#912F3C;
+    font-size: 37px;
+    font-weight: bold;
+  }
+  .about-us {
+    background-color: #fff;
+  }
+  
+  .about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    margin-bottom: 40px;
+
+  }
+  
+  .about-us .row .col-md-3 h4 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .about-us .row .col-md-3 p {
+    font-size: 1rem;
+    color: #fff;
+  }
+  .back{
+    background-color: #224944;
+  }
+  .leadership-team {
+    background-color: #fff;
+  }
+  
+  .leadership-team h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .card{
+    border: none;
+  }
+  .card-img-top{
+    height: 294px;
+    width: 198px;
+    background-image: url(assets/bratbg.png);
+
+  }
+  .leadership-team .card {
+    /* position: absolute;
+    top:-50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    object-fit:cover;
+    z-index:10; */
+    margin-bottom: 30px;
+  }
+  
+  .leadership-team .card-title {
+    font-size: 1.25rem;
+    margin-top: 10px;
+  }
+  
+  .facilities{
+    background-image: url('assets/classroom.png'); 
+    background-size: cover;
+    position: relative;  
+  }
+  .green{
+    background: rgba(34, 73, 68, 0.5);
+    z-index: 1;
+  }
+  .facilities>content{
+    z-index: 2;
+    }
+
+.facility-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.facility-box .icon img {
+    max-width: 40px;
+}
+
+.facility-box .btn {
+    background-color: #912F3C;
+    color: #fff;
+    border: none;
+}
+
+.login-form {
+    border-radius: 5px;
+    background-color: gray;
+}
+
+.testimonials .testimonial-box {
+    position: relative;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.testimonials {
+  background-color: #D9D9D9;
+}
+.testimonial-box {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding-top: 60px;
+}
+.testimonial-img {
+  width: 110px;
+  height: 110px;
+  background-image: url('assets/kishwar.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 5px solid #f8f9fa;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  overflow: hidden;
+  border: 15px solid #D9D9D9;
+}
+  
+.school-collaboration {
+    background-color: #ffffff;
+  }
+  
+.school-collaboration h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .school-collaboration .row div {
+    margin-bottom: 20px;
+  }
+  
+  .school-collaboration img {
+    max-width: 100px;
+  }
+  
+  .footer {
+    background-color: #002C45;
+  }
+  
+  .footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+  
+  .footer p {
+    margin-bottom: 10px;
+  }
+  
+  .footer a img {
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+  li + li {
+    margin-top: 10px;
+  }

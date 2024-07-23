@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Video Background</title>
+    <style>
+        .video-background {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .left-text {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .program-buttons {
+            margin-top: 20px;
+        }
+
+        .program-button {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ffffffb3;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .program-icon img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .program-button h5 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .program-button p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .btn-enroll {
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .left-text {
+                font-size: 2rem;
+            }
+
+            .program-buttons {
+                margin-top: 10px;
+            }
+
+            .program-button {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .program-icon img {
+                margin-bottom: 10px;
+            }
+
+            .btn-enroll {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="video-background">
+        <video autoplay muted loop>
+            <source src="assets/scenery.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <div class="row h-100 w-100 flex-wrap">
+                <!-- Left Text Column -->
+                <div class="col-md-4 left-text mb-3 mb-md-0">
+                    GET START WITH ALCOVIA
+                </div>
+
+                <!-- Center Button Column -->
+                <div class="col-md-4 text-center d-flex align-items-end justify-content-center mb-3 mb-md-0">
+                    <button class="btn btn-danger rounded-pill px-4 btn-enroll">Enroll Now</button>
+                </div>
+
+                <!-- Right Program Buttons Column -->
+                <div class="col-md-4 program-buttons">
+                    <div class="program-button">
+                        <div class="program-icon">
+                            <img src="assets/undergrad.png" alt="Undergraduate Programs">
+                        </div>
+                        <div>
+                            <h5>Undergraduate Programs</h5>
+                            <p>You've been researching exactly what skill</p>
+                            <button class="btn btn-danger rounded-pill btn-sm float-end">Know more</button>
+                        </div>
+                    </div>
+                    <div class="program-button">
+                        <div class="program-icon">
+                            <img src="assets/postgrad.png" alt="Postgraduate Programs">
+                        </div>
+                        <div>
+                            <h5>Postgraduate Programs</h5>
+                            <p>You've been researching exactly what skill</p>
+                            <button class="btn btn-danger rounded-pill btn-sm float-end">Know more</button>
+                        </div>
+                    </div>
+                    <div class="program-button">
+                        <div class="program-icon">
+                            <img src="assets/doctorate.png" alt="Doctorate Programs">
+                        </div>
+                        <div>
+                            <h5>Doctorate Programs</h5>
+                            <p>You've been researching exactly what skill</p>
+                            <button class="btn btn-danger rounded-pill btn-sm float-end">Know more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
