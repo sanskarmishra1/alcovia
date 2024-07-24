@@ -12,26 +12,28 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
-    <button class="navbar-toggler text-center" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"><img src="assets/togglebar.png" alt=""></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#"></a>
-        </li>
-      </ul>
-      <a class="navbar-brand mx-auto" href="#">
-        <img src="assets/Mask group.png" alt="Alcovia Logo">
-      </a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="customerservice.html" class="nav-link"><img src="assets/customerservice.png " height="20" alt="customer care"></a>
-          </a>
-        </li>
-      </ul>
+    <div class="container-fluid col-12 float-start">
+      <div class="col-4">
+        <!-- Toggelebar Icon -->
+        <a href="#" class="nav-link btn togglebar text-start ms-2">
+          <img src="assets/togglebar.png" alt="Toggelebar" height="20px">
+        </a>
+      </div>
+      <div class="col-4 text-center">
+        <!-- Logo in the center -->
+        <a class="navbar-brand mx-auto d-none d-lg-block" href="#">
+          <img src="assets/Mask group.png" alt="Alcovia Logo">
+        </a>
+      </div>  
+      <div class="col-4 text-end">
+        <!-- Customer Care Icon -->
+        <a href="customerservice.html" class="nav-link ms-auto me-2">
+          <img src="assets/customerservice.png" alt="Customer Care" height="20px">
+        </a>
+      </div>  
     </div>
   </nav>
+  
   <section class="video-background">
     <video autoplay muted loop>
       <source src="assets/scenery.mp4" type="video/mp4">
@@ -39,7 +41,7 @@
     <div class="overlay">
       <div class="row h-100">
         <div class="col-md-4 left-text">
-          <div class="ms-xl-5">GET START WITH ALCOVIA</div>
+          <div class="leftmargin">GET START WITH ALCOVIA</div>
         </div>
         <div class="col-md-4 text-center d-flex align-items-end justify-content-center pb-lg-5">
           <button class="btn btn-danger rounded-pill px-5 btn-md">Enroll Now</button>
@@ -110,11 +112,13 @@
   <!-- Leadership Team Section -->
   <section class="leadership-team text-center py-2">
     <div class="container">
-      <h2>Our leadership team</h2>
+      <h2 class="pb-4 mb-5">Our leadership team</h2>
       <div class="row">
         <div class="col-md-3">
           <div class="card align-items-center">
-            <img src="assets/mrbrat.png" class="card-img-top" alt="Mr. Brat">
+            <div class="card-image1">
+              <img src="assets/mrbrat.png" class="card-img-top" alt="Mr. Brat">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Mr. Brat</h5>
               <p class="card-text">Cloud Engineer</p>
@@ -124,7 +128,9 @@
         </div>
         <div class="col-md-3">
           <div class="card align-items-center">
-            <img src="assets/mrbrat.png" class="card-img-top" alt="Mr. Brat">
+            <div class="card-image2">
+              <img src="assets/mrbrat.png" class="card-img-top" alt="Mr. Brat">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Mr. Brat</h5>
               <p class="card-text">Cloud Engineer</p>
@@ -134,7 +140,9 @@
         </div>
         <div class="col-md-3">
           <div class="card align-items-center">
-            <img src="assets/mrbrat.png" class="card-img-top" alt="Mr. Brat">
+            <div class="card-image3">
+              <img src="assets/mrbrat.png" class="card-img-top" alt="Mr. Brat">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Mr. Brat</h5>
               <p class="card-text">Cloud Engineer</p>
@@ -144,8 +152,10 @@
         </div>
         <div class="col-md-3">
           <div class="card align-items-center">
-            <img src="assets/mrbrat.png" class="card-img-top" alt="Mr. Brat">
-            <div class="card-body bg-white">
+            <div class="card-image4">
+              <img src="assets/mrbrat.png" class="card-img-top" alt="Mr. Brat">
+            </div>
+            <div class="card-body">
               <h5 class="card-title">Mr. Brat</h5>
               <p class="card-text">Cloud Engineer</p>
               <hr>
@@ -182,7 +192,7 @@
                 </div>
             </div>
             <div class="col-6">
-              <form class="login-form rounded bg-secondary-subtle p-4">
+              <form class="login-form rounded bg-secondary-subtle p-4 pb-5">
                   <div class="row">
                       <div class="form-group col-6 p-2">
                           <label for="firstName">First Name</label>
@@ -199,18 +209,20 @@
                           <input type="email" class="form-control" id="email">
                       </div>
                   </div>
-                  <div class="row">
-                      <div class="form-group col-6 p-2">
+                  <div class="row pb-3">
+                      <div class="form-group col-6 p-2 pb-0">
                           <label for="phone">Phone no</label>
                           <input type="text" class="form-control" id="phone">
                       </div>
-                      <div class="form-group col-6 p-2">
+                      <div class="form-group col-6 p-2 pb-0">
                           <label for="course">Course</label>
                           <input type="text" class="form-control" id="course">
                       </div>
                   </div>
-                  <!-- <a class="link-underline-primary" href="#">Already have an account?</a> -->
-                  <button type="submit" class="btn btn-primary float-end">Submit</button>
+                  <div class="row submit float-end">
+                    <button type="submit" class="btn float-end rounded-pill text-white">Submit</button>
+                  </div>
+                  
               </form>
             
             </div>
@@ -263,31 +275,89 @@
     <div class="container">
       <h2>School collaboration</h2>
       <div class="row justify-content-center">
-        <div class="col-md-2">
-          <img src="assets/afs.png" alt="Gardenbook" class="img-fluid">
-          <p>Gardenbook</p>
-        </div>
-        <div class="col-md-2">
-          <img src="assets/afs.png" alt="EDUBOOK" class="img-fluid">
-          <p>EDUBOOK</p>
-        </div>
-        <div class="col-md-2">
-          <img src="assets/afs.png" alt="Chat Book" class="img-fluid">
-          <p>Chat Book</p>
-        </div>
-        <div class="col-md-2">
-          <img src="assets/afs.png" alt="School4" class="img-fluid">
-          <p>School4</p>
-        </div>
-        <div class="col-md-2">
-          <img src="assets/afs.png" alt="School4" class="img-fluid">
-          <p>School5</p>
-        </div>
-        <div class="col-md-2">
-          <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
-          <p>Flying Book</p>
-        </div>
+        <div id="schoolCarousel" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators row align-items-center">
+            <li data-bs-target="#schoolCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#schoolCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#schoolCarousel" data-bs-slide-to="2"></li>
+            <li data-bs-target="#schoolCarousel" data-bs-slide-to="3"></li>
+            <li data-bs-target="#schoolCarousel" data-bs-slide-to="4"></li>
+            <li data-bs-target="#schoolCarousel" data-bs-slide-to="5"></li>
+            <li data-bs-target="#schoolCarousel" data-bs-slide-to="5"></li>
+          </ol>
+
+          <!-- Carousel items -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <div class="text-center">
+                  <img src="assets/afs.png" alt="Gardenbook" class="img-fluid">
+                  <p>Gardenbook</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="text-center">
+                  <img src="assets/afs.png" alt="EDUBOOK" class="img-fluid">
+                  <p>EDUBOOK</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="text-center">
+                  <img src="assets/afs.png" alt="Chat Book" class="img-fluid">
+                  <p>Chat Book</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="text-center">
+                  <img src="assets/afs.png" alt="School4" class="img-fluid">
+                  <p>School4</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="text-center">
+                  <img src="assets/afs.png" alt="School5" class="img-fluid">
+                  <p>School5</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="text-center">
+                  <img src="assets/afs.png" alt="School6" class="img-fluid">
+                  <p>School6</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="text-center">
+                  <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
+                  <p>Flying Book</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="carousel-control-prev" href="#schoolCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class=""><img src="assets/back.png" alt="" height="70px"></span>
+          </a>
+          <a class="carousel-control-next" href="#schoolCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class=""><img src="assets/next.png" alt="" height="60px"></span>
+          </a>
       </div>
+
     </div>
   </section>
 

@@ -5,16 +5,56 @@
 body {
     font-family: 'Poppins', sans-serif;
   }
-
+  
 .navbar{
     background-color: #224944;
     height: 64px;
+    padding: 10px 0;
 }
-
-
 .navbar-brand img {
-    height: 75px;
+    height: 80px;
   }
+
+.navbar-collapse {
+    display: flex; 
+    align-items: center;
+  }
+  
+.navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+.navbar-nav .nav-item {
+    margin-right: 15px;
+  }
+  
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      flex-direction: column;
+    }
+  
+  .navbar-nav {
+      margin-top: 10px;
+      flex-direction: column;
+  }
+  
+    .navbar-nav .nav-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .navbar-nav .nav-link {
+      text-align: center; 
+    }
+  
+    .navbar-brand {
+      display: block;
+      position: absolute;
+      left: 50%;
+    }
+  }
+  
 .video-background {
     position: relative;
     height: 100vh;
@@ -46,7 +86,9 @@ body {
     height: 100%;
     background: rgba(34, 73, 68, 0.5);
   }
-  
+  .leftmargin{
+    margin-left: 100px;
+  }
   .program-buttons {
     display: flex;
     flex-direction: column;
@@ -54,13 +96,14 @@ body {
     height: 100%;
   }
   .program-button {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255,0.9);
     color: black;
     margin-bottom: 10px;
     padding: 15px;
     border-radius: 5px;
     display:flex;
     align-items: center;
+    border-radius: 40px;
   }
   .program-button img {
     margin-right: 10px;
@@ -74,6 +117,7 @@ body {
     border-radius: 50%;
     align-items: center;
     box-sizing: border-box;
+    margin-right: 10px;
 }
 
   .program-icon>img{
@@ -134,21 +178,50 @@ body {
   
   .card{
     border: none;
+    height: 30;
+    position: relative;
   }
-  .card-img-top{
-    /* height: 294px;
-    width: 198px; */
-    background-color: #002C45;
-    border-top-left-radius: 150px;
+  .card-image1{
+    background-color: #224944;
+    border-top-left-radius: 100px;
+    width: 90%;
+    height: 352px;
+    width: 100%;  
 
   }
+  .card-image2{
+    background-color: #D3AF35;
+    border-top-left-radius: 100px; 
+    width: 90%;
+    height: 352px;
+    width: 100%;
+    z-index: 1;
+  }
+  .card-image3{
+    background-color: #002C45;
+    border-top-left-radius: 100px; 
+    width: 90%;
+    height: 352px;
+    width: 100%;
+    z-index: 1;
+  }
+  .card-image4{
+    background-color: #912F3C;
+    border-top-left-radius: 100px; 
+    width: 90%;
+    height: 352px;
+    width: 100%;
+    z-index: 1;
+  }
+  .card-img-top{
+    position: relative;
+    transform:scaleY(1.3);
+   
+    width: 306px;
+    height: 306px;
+    z-index: 99;
+  }
   .leadership-team .card {
-    /* position: absolute;
-    top:-50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    object-fit:cover;
-    z-index:10; */
     margin-bottom: 30px;
   }
   
@@ -163,7 +236,7 @@ body {
     position: relative;  
   }
   .green{
-    background: rgba(34, 73, 68, 0.5);
+    background: rgba(34, 73, 68, 0.7);
     z-index: 1;
   }
   .facilities>content{
@@ -191,10 +264,13 @@ body {
     border-radius: 5px;
     background-color: gray;
 }
-
+.submit{
+  background-color:#224944;
+  border-radius: 10px;
+  margin-right: 0px;
+}
 .testimonials .testimonial-box {
     position: relative;
-    border-radius: 5px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -233,7 +309,7 @@ body {
     font-size: 2rem;
     margin-bottom: 30px;
   }
-  
+
   .school-collaboration .row div {
     margin-bottom: 20px;
   }
@@ -241,7 +317,7 @@ body {
   .school-collaboration img {
     max-width: 100px;
   }
-  
+  li::marker{font-size:0px;}
   .footer {
     background-color: #002C45;
   }
@@ -266,4 +342,7 @@ body {
   .copyright>a {
       color: rgb(255 255 255);
       text-decoration: none;
+  }
+  hr{
+    color:solid #0000;
   }
