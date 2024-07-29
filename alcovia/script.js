@@ -1,28 +1,42 @@
 $(document).ready(function(){
     // $(window).on('scroll',function(){
     //     var scroll = $(window).scrollTop(); 
-    //     console.log(scroll);
+    //     // console.log(scroll);
+    //     // if (scroll === 450 || scroll === 946) {
+    //     //   resetCounters();
+    //     //   updateCounters();
+    //     // }
     // })
 
-    // counter for about us
+    // Counter for "About Us"
     const counters = document.querySelectorAll('.count');
     const speed = 200;
     
-    counters.forEach((counter) => {
-      const updateCount = () => {
-        const target = parseInt(counter.getAttribute('data-target'));
-        const count = parseInt(counter.innerText);
-        const increment = Math.trunc(target / speed);
-    
-        if (count < target) {
-          counter.innerText = count + increment;
-          setTimeout(updateCount, 1);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      updateCount();
-    });
+    // const resetCounters = () => {
+    //   counters.forEach((counter) => {
+    //       counter.innerText = '0'; // Reset counter text to 0
+    //   });
+    // };
+    // Function to update all counters
+    const updateCounters = () => {
+        counters.forEach((counter) => {
+            const updateCount = () => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const count = parseInt(counter.innerText);
+                const increment = Math.trunc(target / speed);
+
+                if (count < target) {
+                    counter.innerText = count + increment;
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    };
+    updateCounters();
+
 
     // mouse-hover for button
     const $button = $('.submit');
