@@ -7,8 +7,14 @@ html {
 }
 body {
     font-family: 'Poppins', sans-serif;
+    h2{
+      color:#912F3C;
+      font-size: 37px;
+      font-weight: bold;
+    }
   }  
   
+/* Navbar section */
   .navbar {
     background-color: #224944;
     height: 64px;
@@ -37,8 +43,8 @@ body {
       flex-wrap: nowrap;
     }
   }
-  
-  
+
+/* main section */
   .video-background {
     position: relative;
     height: 100vh;
@@ -57,17 +63,20 @@ body {
   }
   
   .overlay {
+    position: relative;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    text-align: center;
   }
   
   .left-text {
     position: relative;
     color: white;
-    font-size: 6.5vw;
+    font-size: 7vw;
     font-weight: 750;
     display: flex;
     flex-wrap: wrap;
@@ -84,7 +93,6 @@ body {
   }
   
   .enroll {
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,6 +112,7 @@ body {
   }
   
   .program-button {
+    position: relative;
     background-color: rgba(255, 255, 255, 0.9);
     color: black;
     margin-bottom: 0.625rem;
@@ -112,7 +121,7 @@ body {
     align-items: center;
     border-radius: 2.5rem;
     width: 100%;
-    max-width: 23rem;
+    max-width: 25rem;
   }
   
   .program-button img {
@@ -145,7 +154,7 @@ body {
   
   @media (max-width: 1236px) {
     .left-text {
-      font-size: 5vw;
+      font-size: 6.8vw;
     }
     .program-button {
       padding: 0.75rem;
@@ -169,7 +178,7 @@ body {
   
   @media (max-width: 992px) {
     .left-text {
-      font-size: 4vw;
+      font-size: 7vw;
     }
     .program-button {
       padding: 0.625rem;
@@ -185,7 +194,7 @@ body {
       height: 3.25rem;
     }
     .margin_programbuttons {
-      padding-right: 3.25rem;
+      padding-right: 0.5rem;
       padding-top: 0.5rem;
     }
   }
@@ -194,26 +203,34 @@ body {
     .overlay {
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
     .left-text {
-      font-size: 3.5vw;
+      font-size: 10vw;
       text-align: center;
-      padding: 1rem 0;
       height: auto;
+      flex: 1;
+      width: 100%;
+      padding: 2rem 0;
+    }
+    .leftmargin {
+      margin-left: auto;
     }
     .enroll {
-      padding-bottom: 1.5rem;
       width: 100%;
+      padding-bottom: 1.5rem;
     }
     .program-buttons {
-      width: 100%;
+      display: none;
+      /* width: 100%; */
     }
     .program-button {
-      padding: 0.5rem;
+      display: none;
+      /* padding: 0.5rem;
       margin-bottom: 0.5rem;
-      width: 80%;
+      width: 80%; */
     }
-    .program-icon {
+    /* .program-icon {
       width: 5rem;
       height: 5rem;
       padding: 0.75rem;
@@ -221,20 +238,33 @@ body {
     .program-icon > img {
       width: 2.75rem;
       height: 2.75rem;
-    }
+    } */
   }
   
   @media (max-width: 576px) {
-    .left-text {
-      font-size: 3vw;
-    }
-    .program-button {
+    .overlay {
       flex-direction: column;
       align-items: center;
-      text-align: center;
-      padding: 0.5rem;
+      justify-content: center;
+  
     }
-    .program-icon {
+    .left-text {
+      font-size: 8vh;
+      text-align: center;
+      padding: 3rem 0;
+      margin-bottom: auto;
+    }
+    .leftmargin {
+      margin-left: auto;
+    }
+    .program-buttons {
+      display: none;
+      /* flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0.5rem; */
+    }
+    /* .program-icon {
       width: 4.5rem;
       height: 4.5rem;
       padding: 0.625rem;
@@ -242,13 +272,10 @@ body {
     .program-icon > img {
       width: 2.5rem;
       height: 2.5rem;
-    }
+    } */
   }  
-  h2{
-    color:#912F3C;
-    font-size: 37px;
-    font-weight: bold;
-  }
+
+/* About us Section */
   .about-us {
     background-color: #fff;
   }
@@ -284,7 +311,7 @@ body {
     margin-bottom: 20px;
   }
   
-  .card{
+  .leadership-team>.card{
     border: none;
     height: 30;
     position: relative;
@@ -337,47 +364,104 @@ body {
     font-size: 1.25rem;
     margin-top: 10px;
   }
-  
-  .facilities{
-    background-image: url('assets/classroom.png'); 
-    background-size: cover;
-    position: relative;  
-  }
-  .green{
-    background: rgba(34, 73, 68, 0.7);
-    z-index: 1;
-  }
-  .facilities>content{
-    z-index: 2;
-    }
+
+/* Facilities and form Section */
+.facilities {
+  background-image: url('assets/classroom.png'); 
+  background-size: cover;
+  position: relative;  
+}
+
+.green {
+  background: rgba(34, 73, 68, 0.7);
+  z-index: 1;
+}
 
 .facility-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
 }
 
 .facility-box .icon img {
-    max-width: 40px;
+  max-width: 40px;
 }
 
 .facility-box .btn {
-    color: #fff;
-    border: none;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
 }
 
 .login-form {
-    border-radius: 5px;
-    background-color: gray;
+  border-radius: 5px;
+  background-color: gray;
 }
-.submit{
-  background-color:#224944;
+
+.submit {
+  background-color: #224944;
   border-radius: 10px;
-  margin-right: 0px;
+  margin-right: 0;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
+  }
+
+  .facility-column {
+      width: 100%;
+  }
+
+  .form-column {
+      width: 100%;
+      margin-top: 20px;
+  }
+  .login-form>.row{
+    max-height: 10vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .facility-box {
+      padding: 10px;
+  }
+
+  .facility-box h4 {
+      font-size: 1rem;
+  }
+
+  .facility-box p {
+      font-size: 0.9rem;
+  }
+
+  .login-form {
+      padding: 20px;
+  }
+
+  .login-form .form-group {
+      padding: 10px 0;
+  }
+
+  .submit button {
+      width: 100%;
+  }
+  .login-form>.row{
+    max-height: 10vh;
+  }
+}
+
+
+/* Testimonial Section */
 .carousel-inner {
   padding: 1em;
+}
+.carousel-item>.card{
+  height: 191px;
+  border: none;
+  position: relative;
 }
 
 @media screen and (min-width: 576px) {
@@ -413,7 +497,6 @@ body {
   background-color: #D9D9D9;
   border-radius: 50%;
   top: 50%;
-  /* transform: translateY(-50%); */
 }
 .testimonials .testimonial-box {
     position: relative;
@@ -446,9 +529,15 @@ body {
   overflow: hidden;
   border: 15px solid #D9D9D9;
 }
+
+/* School Collaboration */
 .school-collaboration {
     background-color: #ffffff;
   }
+
+.school{
+  margin: 20px;
+}
   
 .school-collaboration h2 {
     font-size: 2rem;
@@ -471,7 +560,7 @@ body {
   
   .my {
     display: flex;
-    animation: scroll-left 25s linear infinite;
+    animation: scroll-left 15s linear infinite;
   }
   
   .scrollmenu::-webkit-scrollbar {
@@ -489,7 +578,7 @@ body {
       transform: translateX(-100%);
     }
   }
-  
+  /* Footer Section */
   li::marker{font-size:0px;}
   .footer {
     background-color: #002C45;

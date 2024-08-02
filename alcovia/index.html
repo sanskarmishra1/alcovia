@@ -21,7 +21,7 @@
       </div>
       <div class="col-4 text-center d-flex justify-content-center">
         <!-- Logo in the center -->
-        <a class="navbar-brand mx-auto" href="#">
+        <a class="navbar-brand mx-auto" href="#" data-toggle="tooltip" data-placement="top" title="Alcovia">
           <img src="assets/Mask group.png" alt="Alcovia Logo">
         </a>
       </div>
@@ -35,7 +35,7 @@
   </nav>
 
 <!-- main section -->
-  <section class="video-background">
+<section class="video-background">
     <video autoplay muted loop>
       <source src="assets/scenery.mp4" type="video/mp4">
     </video>
@@ -43,9 +43,9 @@
       <div class="row h-100">
         <div class="col-md-4 left-text">
           <div class="leftmargin">GET START WITH ALCOVIA</div>
-        </div>
-        <div class="col-md-4 text-center enroll d-flex align-items-end justify-content-center pb-lg-5">
-          <button class="btn btn-danger rounded-pill px-5">Enroll Now</button>
+        </div> 
+        <div class="col-md-4 text-center enroll d-flex align-items-end justify-content-center py-3 pb-lg-5">
+          <button class="btn btn-danger btn-outline-light rounded-pill px-5">Enroll Now</button>
         </div>
         <div class="col-md-4 program-buttons margin_programbuttons">
           <div class="program-button">
@@ -75,7 +75,7 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
   
 
   <!-- About Us Section -->
@@ -116,7 +116,7 @@
     </div>
   </section>
   
-  <!-- Leadership Team Section -->
+  <!-- About Team -->
   <section class="leadership-team text-center py-2">
     <div class="container">
       <h2 class="pb-4 mb-5">Our leadership team</h2>
@@ -174,68 +174,70 @@
   </section>
 
 <!-- facilities and form -->
-  <section class="facilities">
-    <div class="green">
-    <div class="container content py-5">
-        <div class="row">
-            <div class="col-6">
-                <div class="facility-box mb-4">
-                    <div class="d-flex align-items-center">
-                        <div class="ml-3">
-                            <h4><img src="assets/scholarship.png" alt="Icon">Scholarship Facilities</h4>
-                            <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding new functionality.</p>
-                        </div>
-                        <button class="btn rounded-circle btn-danger ml-auto">></button>
-                    </div>
-                </div>
-                <div class="facility-box">
-                    <div class="d-flex align-items-center">
-                        <div class="ml-3">
-                            <h4><img src="assets/elearning.png" alt="Icon">E-learning Facilities</h4>
-                            <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding new functionality.</p>
-                        </div>
-                        <button class="btn rounded-circle btn-danger ml-auto">></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-              <form class="login-form rounded bg-secondary-subtle p-4 pb-5">
-                  <div class="row">
-                      <div class="form-group col-6 p-2">
-                          <label for="firstName">First Name</label>
-                          <input type="text" class="form-control" id="firstName">
-                      </div>
-                      <div class="form-group col-6 p-2">
-                          <label for="lastName">Last Name</label>
-                          <input type="text" class="form-control" id="lastName">
+<section class="facilities">
+  <div class="green">
+      <div class="container content py-5">
+          <div class="row">
+              <div class="col-md-6 facility-column">
+                  <div class="facility-box mb-4">
+                      <div class="d-flex align-items-center">
+                          <div class="ml-3">
+                              <h4>
+                                  <img src="assets/scholarship.png" alt="Icon"> Scholarship Facilities
+                              </h4>
+                              <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding new functionality.</p>
+                          </div>
+                          <button class="btn rounded-circle btn-danger ml-auto">></button>
                       </div>
                   </div>
-                  <div class="row">
-                      <div class="form-group col-12 p-2">
-                          <label for="email">Email</label>
-                          <input type="email" class="form-control" id="email">
+                  <div class="facility-box">
+                      <div class="d-flex align-items-center">
+                          <div class="ml-3">
+                              <h4>
+                                  <img src="assets/elearning.png" alt="Icon"> E-learning Facilities
+                              </h4>
+                              <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding new functionality.</p>
+                          </div>
+                          <button class="btn rounded-circle btn-danger ml-auto">></button>
                       </div>
                   </div>
-                  <div class="row pb-3">
-                      <div class="form-group col-6 p-2 pb-0">
-                          <label for="phone">Phone no</label>
-                          <input type="text" class="form-control" id="phone">
+              </div>
+              <div class="col-md-6 form-column">
+                  <form class="login-form rounded bg-secondary-subtle p-4 pb-5">
+                      <div class="row">
+                          <div class="form-group col-6 p-2">
+                              <label for="firstName">First Name</label>
+                              <input type="text" class="form-control" id="firstName">
+                          </div>
+                          <div class="form-group col-6 p-2">
+                              <label for="lastName">Last Name</label>
+                              <input type="text" class="form-control" id="lastName">
+                          </div>
                       </div>
-                      <div class="form-group col-6 p-2 pb-0">
-                          <label for="course">Course</label>
-                          <input type="text" class="form-control" id="course">
+                      <div class="row">
+                          <div class="form-group col-12 p-2">
+                              <label for="email">Email</label>
+                              <input type="email" class="form-control" id="email">
+                          </div>
                       </div>
-                  </div>
-                  <div class="row submit float-end">
-                    <button type="submit" class="btn float-end text-white">Submit</button>
-                  </div>
-                  
-              </form>
-            
-            </div>
-        </div>
-    </div>
-    </div>
+                      <div class="row pb-3">
+                          <div class="form-group col-6 p-2 pb-0">
+                              <label for="phone">Phone no</label>
+                              <input type="text" class="form-control" id="phone">
+                          </div>
+                          <div class="form-group col-6 p-2 pb-0">
+                              <label for="course">Course</label>
+                              <input type="text" class="form-control" id="course">
+                          </div>
+                      </div>
+                      <div class="row submit float-end">
+                          <button type="submit" class="btn float-end text-white">Submit</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
 </section>
 
 <!-- Testimonials Section -->
@@ -246,67 +248,7 @@
           <div id="testimonialCarousel" class="carousel">
               <div class="carousel-inner">
                   <div class="carousel-item active pt-5">
-                      <div class="card shadow-sm rounded-3" style="height: 0px">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item pt-5">
-                      <div class="card shadow-sm rounded-3" style="height: 0px">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item pt-5">
-                      <div class="card shadow-sm rounded-3" style="height: 0px">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item pt-5">
-                      <div class="card shadow-sm rounded-3" style="height: 0px">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item pt-5">
-                      <div class="card shadow-sm rounded-3" style="height: 0px">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item pt-5">
-                      <div class="card shadow-sm rounded-3" style="height: 0px">
+                      <div class="card shadow-sm rounded-3">
                           <div class="card-body testimonial-box position-relative p-4">
                               <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
                                   <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
@@ -319,7 +261,67 @@
                   </div>
                   <div class="carousel-item pt-5">
                       <div class="card shadow-sm rounded-3">
-                          <div class="card-body testimonial-box position-relative p-3">
+                          <div class="card-body testimonial-box position-relative p-4">
+                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
+                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
+                                      <span>Kishwar</span>
+                                      <span class="text-warning">★★★★★</span>
+                                  </h4>
+                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item pt-5">
+                      <div class="card shadow-sm rounded-3">
+                          <div class="card-body testimonial-box position-relative p-4">
+                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
+                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
+                                      <span>Kishwar</span>
+                                      <span class="text-warning">★★★★★</span>
+                                  </h4>
+                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item pt-5">
+                      <div class="card shadow-sm rounded-3">
+                          <div class="card-body testimonial-box position-relative p-4">
+                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
+                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
+                                      <span>Kishwar</span>
+                                      <span class="text-warning">★★★★★</span>
+                                  </h4>
+                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item pt-5">
+                      <div class="card shadow-sm rounded-3">
+                          <div class="card-body testimonial-box position-relative p-4">
+                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
+                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
+                                      <span>Kishwar</span>
+                                      <span class="text-warning">★★★★★</span>
+                                  </h4>
+                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item pt-5">
+                      <div class="card shadow-sm rounded-3">
+                          <div class="card-body testimonial-box position-relative p-4">
+                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
+                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
+                                      <span>Kishwar</span>
+                                      <span class="text-warning">★★★★★</span>
+                                  </h4>
+                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item pt-5">
+                      <div class="card shadow-sm rounded-3">
+                          <div class="card-body testimonial-box position-relative p-4">
                               <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
                                   <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
                                       <span>Kishwar</span>
@@ -350,55 +352,55 @@
     <h2>School collaboration</h2>
     <div class="scroll-container scrollmenu">
       <div class=" my">
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="Gardenbook" class="img-fluid">
           <p>Gardenbook</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="EDUBOOK" class="img-fluid">
           <p>EDUBOOK</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="Chat Book" class="img-fluid">
           <p>Chat Book</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="School4" class="img-fluid">
           <p>School 4</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="School5" class="img-fluid">
           <p>School 5</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
           <p>Flying Book</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
           <p>School 6</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
           <p>School 7</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
           <p>School 8</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
           <p>Flying Book</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
           <p>Flying Book</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
           <p>Flying Book</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 school">
           <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
           <p>Flying Book</p>
         </div>
@@ -417,7 +419,7 @@
           <div class="row"><img class="float-start" src="assets/falcovia.png" alt=""></div>
             <div class="row">
               <p>World largest online learning platform. Download our apps to start learning.</p>
-              <a href="tel:+91458654528" class="text-warning h5">Call Us - +91 458 654 528</a>
+              <a href="tel:+91458654528" class="text-warning h5" data-toggle="tooltip" data-placement="top" title="Click to Call">Call Us - +91 458 654 528</a>
             </div>
         </div>
         <div class="col-md-3">
@@ -440,7 +442,7 @@
         </div>
         <div class="col-md-3">
           <h5 class="text-warning"  >Download Now</h5>
-          <a href="" target="_blank"><img src="assets/download.png" alt="Google Play" class="img-fluid">
+          <a href="" target="_blank" data-toggle="tooltip" data-placement="top" title="Click to begin Download"><img src="assets/download.png" alt="Google Play" class="img-fluid">
         </div>
       </div>
       <hr>
