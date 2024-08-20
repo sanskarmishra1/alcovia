@@ -3,21 +3,32 @@ $(document).ready(function(){
     //     var scroll = $(window).scrollTop(); 
     //     // console.log(scroll);
     //     // if (scroll === 450 || scroll === 946) {
-    //     //   resetCounters();
     //     //   updateCounters();
     //     // }
     // })
 
-    // Counter for "About Us"
+
+    // Loading animation 
+    gsap.fromTo(
+      ".loading-page",
+      { opacity: 1 },
+      {
+        opacity: 0,
+        display: "none",
+        duration: 1.5,
+        delay: 2,
+      }
+    );
+
+
+    // offcanvas width
+    document.getElementById("offcanvasNavbar").style.width = "350px";
+    
+    
+    // Counter for Who we are
     const counters = document.querySelectorAll('.count');
     const speed = 200;
-    
-    // const resetCounters = () => {
-    //   counters.forEach((counter) => {
-    //       counter.innerText = '0'; // Reset counter text to 0
-    //   });
-    // };
-    // Function to update all counters
+  
     const updateCounters = () => {
         counters.forEach((counter) => {
             const updateCount = () => {
@@ -37,6 +48,35 @@ $(document).ready(function(){
     };
     updateCounters();
 
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+      console.log(entry)
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      } 
+      // else{
+      //   entry.target.classList.remove('show');
+      // }
+    });
+  })
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el)=> observer.observe(el)); 
+    
+  // new observer for steps
+  const observer2 = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+      console.log(entry)
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+      } 
+      // else{
+      //   entry.target.classList.remove('show');
+      // }
+    });
+  })
+  const hiddenElements2 = document.querySelectorAll('.out');
+  hiddenElements2.forEach((el)=> observer2.observe(el)); 
+    
 
     // mouse-hover for button
     const $button = $('.submit');
@@ -47,6 +87,9 @@ $(document).ready(function(){
         $(this).css('background-color', '');
     });
 
+
+
+    
     // for testimonial carousel
 const multipleItemCarousel = document.querySelector("#testimonialCarousel");
 
@@ -76,29 +119,10 @@ if (window.matchMedia("(min-width:576px)").matches) {
 } else {
   $(multipleItemCarousel).addClass("slide");
 }
-// Who are we animation trigger
-  // Check if element is in viewport
-  // const isElementInView = (el) => {
-  //     const rect = el.getBoundingClientRect();
-  //     return (
-  //         rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0
-  //     );
-  // };
 
-  // // Function to handle scroll
-  // const handleScroll = () => {
-  //     const aboutUsSection = document.querySelector('.about-us');
 
-  //     if (isElementInView(aboutUsSection)) {
-  //         aboutUsSection.classList.add('animate');
-  //     }
-  // };
-
-  // // Initial check
-  // handleScroll();
-
-  // // Listen for scroll events
-  // $(window).on('scroll', handleScroll);
-
+// copying the school colaboration items
+var copy = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logos").appendChild(copy);
 
 })

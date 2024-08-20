@@ -6,206 +6,359 @@
   <title>Alcovia</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <body>
+  <!-- onload animation -->
+  <div class="loading-page w-100">
+    <video id="intro-video" autoplay muted>
+        <source src="assets/Logo_alcovia_animation.webm" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </div>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-      <div class="col-4 d-flex justify-content-start">
-        <!-- Togglebar Icon -->
-        <a href="#" class="nav-link btn togglebar">
-          <img src="assets/togglebar.png" alt="Togglebar" height="20px">
-        </a>
-      </div>
-      <div class="col-4 text-center d-flex justify-content-center">
-        <!-- Logo in the center -->
-        <a class="navbar-brand mx-auto" href="#" data-toggle="tooltip" data-placement="top" title="Alcovia">
-          <img src="assets/Mask group.png" alt="Alcovia Logo">
-        </a>
-      </div>
-      <div class="col-4 d-flex justify-content-end">
-        <!-- Customer Care Icon -->
-        <a href="customerservice.html" class="nav-link">
-          <img src="assets/customerservice.png" alt="Customer Care" height="20px">
-        </a>
-      </div>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid d-flex align-items-center">
+        <div class="col-4 d-flex justify-content-start px-4">
+            <!-- Togglebar Icon -->
+            <a href="#" class="nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <img src="assets/togglebar.png" alt="Togglebar" height="20px">
+            </a>
+        </div>
+        <div class="col-4 text-center d-flex justify-content-center">
+            <!-- Logo in the center -->
+            <a class="navbar-brand mx-auto" href="#" data-toggle="tooltip" data-placement="top" title="Alcovia">
+                <img src="assets/alcovia.png" class="text-center" alt="Alcovia Logo">
+            </a>
+        </div>
+        <div class="col-4 d-flex join justify-content-end pe-4">
+            <a href="customerservice.html" class="nav-link">JOIN THE MOVEMENT</a>
+        </div>
     </div>
   </nav>
+
+<!-- Offcanvas Sidebar -->
+<section>
+  <div class="offcanvas custom-offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header mx-auto">
+          <img href="index.html" src="assets/Mask group.png" alt="Alcovia Logo">
+          <button type="button" class="text-reset closebtn" data-bs-dismiss="offcanvas" aria-label="Close">
+            <i class="bi bi-x"></i>
+          </button>
+      </div>
+      <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1">
+            <li class="nav-item out">
+                <a class="nav-link" href="about.html">About Us</a>
+                <hr>
+            </li>
+              <li class="nav-item out">
+                  <a class="nav-link" href="application.html">Apply Now</a>
+                  <hr>
+              </li>
+              <li class="nav-item out">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                  <hr>
+              </li>
+          </ul>
+      </div>
+  </div>
+</section>
 
   <!-- main section -->
   <section class="video-background">
     <video autoplay muted loop>
       <source src="assets/scenery.mp4" type="video/mp4">
     </video>
-    <div class="overlay">
-      <div class="row h-100">
-        <div class="col-md-4 left-text">
-          <div class="leftmargin">GET START WITH ALCOVIA</div>
-        </div> 
-        <div class="col-md-4 text-center enroll d-flex align-items-end justify-content-center py-3 pb-lg-5">
-          <button class="btn btn-danger btn-outline-light rounded-pill px-5">Enroll Now</button>
+      <div class="overlay row h-100">
+        <div class="col-md-4 left-text hidden">
+          AHEAD OF CURVE
         </div>
-        <div class="col-md-4 program-buttons margin_programbuttons">
-          <div class="program-button">
-            <div class="program-icon"><img src="assets/undergrad.png" alt="Undergraduate Programs"></div>
-            <div>
-              <h5>Undergraduate Programs</h5>
-              <p>You've been researching exactly what skill</p>
-              <button class="btn btn-danger rounded-pill btn-sm float-end">Know more</button>
-            </div>
-          </div>
-          <div class="program-button">
-            <div class="program-icon"><img src="assets/postgrad.png" alt="Postgraduate Programs"></div>
-            <div>
-              <h5>Postgraduate Programs</h5>
-              <p>You've been researching exactly what skill</p>
-              <button class="btn btn-danger rounded-pill btn-sm float-end">Know more</button>
-            </div>
-          </div>
-          <div class="program-button">
-            <div class="program-icon"><img src="assets/doctorate.png" alt="Doctorate Programs"></div>
-            <div>
-              <h5>Doctorate Programs</h5>
-              <p>You've been researching exactly what skill</p>
-              <button class="btn btn-danger rounded-pill btn-sm float-end">Know more</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      </div> 
   </section>
 
   <!-- About Us Section -->
-  <section class="about-us text-center py-4 pb-0 animated-section">
+  <section class="about-us text-center py-4 pb-0">
     <div>
       <div class="container">
         <h2>Who We Are?</h2>
-        <p class="text-md-center h5">you've been researching exactly what skill you want to learn, or if you just need one more
-          skill to round out your resume Whether fully virtual, fully in-person or something in between,
-          explore.</p>
-      </div>
-      <div class="d-flex text-center pt-5 text-white back">
+        <div class="container content text-center">
+          <p class="ptext line">you've been researching exactly what skill you want to learn, or if you just need one more skill to round out your resume Whether fully virtual, fully in-person or something in between, explore.</p>
+        </div>
+    </div>
+      <div class="d-flex text-center pt-4 pb-1 text-white back">
         <div class="col-md-3 counter">
           <img src="assets/students.png" class="p-2" alt="Students">
-          <br>
           <h4><span data-target="215" class="count">0</span><span class="">K</span></h4>
           <strong><p>No Students</p></strong>
         </div>
         <div class="col-md-3 counter">
           <img src="assets/videos.png" class="p-2" alt="Videos">
-          <br>
           <h4><span data-target="400" class="count">0</span><span>K</span></h4>
           <strong><p>No of Videos</p></strong>
         </div>
         <div class="col-md-3 counter">
           <img src="assets/classes.png" class="p-2" alt="Live classes">
-          <br>
           <h4><span data-target="600" class="count">0</span></h4>
           <strong><p>Live Classes</p></strong>
         </div>
         <div class="col-md-3 counter">
           <img src="assets/examcat.png" class="p-2" alt="Total Exams">
-          <br>
           <h4><span data-target="200" class="count">0</span></h4>
           <strong><p>Total exam category</p></strong>
         </div>
       </div>
     </div>
   </section>
-  
 
-  <!-- Vision and Mission Section -->
-  <section id="vision-mission" class="text-center py-4">
-    <div class="container">
-      <!-- Vision Section -->
-      <div class="vision-section row align-items-center mb-5">
-        <div class="col-md-6 text-end pe-4">
-          <h3 class="section-title">Our Vision</h3>
-          <p class="section-text">
-            To be a global leader in online education, empowering students to achieve their dreams.
-          </p>
-        </div>
-        <div class="col-md-6 position-relative">
-          <div class="vertical-line"></div>
-          <img src="assets/vision1.jpg" class="img-fluid vismis" alt="Vision Image">
-        </div>
-      </div>
-  
-      <!-- Mission Section -->
-      <div class="mission-section row align-items-center">
-        <div class="col-md-6 position-relative">
-          <img src="assets/mission.webp" class="img-fluid vismis" alt="Mission Image">
-          <div class="vertical-line"></div>
-        </div>
-        <div class="col-md-6 text-start ps-4">
-          <h3 class="section-title">Our Mission</h3>
-          <p class="section-text">
-            To provide accessible, high-quality education to learners worldwide, fostering knowledge and skills for personal and professional growth.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  
-  <!-- About Team -->
-  <section class="leadership-team text-center py-2">
-    <div class="container">
-      <h2 class="pb-4 mb-5">Our leadership team</h2>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card align-items-center">
-            <div class="card-image1">
-              <img src="assets/mrbrat.png" class="card-img-top mrbrat" alt="Mr. Brat">
+
+<!-- Program Section -->
+<section class="program-section">
+  <div class="container text-center my-3 hidden">
+  <h2>Major Programs</h2>
+    <div class="container-fluid d-flex">
+        <!-- First Card -->
+        <div class="program-card col-md-3 d-flex flex-column align-items-center">
+            <img src="assets/workshop.jpg" class="img-fluid shadow mb-3 m-3" alt="Workshops">
+            <div class="information text-center">
+                <h4 class="font-weight-bold">WORKSHOPS</h4>
+                <p class="text-muted"><i>Engaging and Educational</i></p>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Mr. Brat</h5>
-              <p class="card-text">Cloud Engineer</p>
-              <hr>
-            </div>
-          </div>
         </div>
-        <div class="col-md-3">
-          <div class="card align-items-center">
-            <div class="card-image2">
-              <img src="assets/mrbrat.png" class="card-img-top mrbrat" alt="Mr. Brat">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Mr. Brat</h5>
-              <p class="card-text">Cloud Engineer</p>
-              <hr>
-            </div>
-          </div>
+
+        <!-- Second Card -->
+        <div class="program-card col-md-3 d-flex flex-column align-items-center">
+            <div class="information text-center order-2 order-md-1">
+                <h4 class="font-weight-bold">ENTREPRENEURSHIP</h4>
+                <p class="text-muted"><i>Innovative and Inspiring</i></p>
+              </div>
+            <img src="assets/entrepreneurship.jpg" class="img-fluid shadow mb-3 order-1 order-md-2 m-3" alt="Entrepreneurship">
         </div>
-        <div class="col-md-3">
-          <div class="card align-items-center">
-            <div class="card-image3">
-              <img src="assets/mrbrat.png" class="card-img-top mrbrat" alt="Mr. Brat">
+
+        <!-- Third Card -->
+        <div class="program-card col-md-3 d-flex flex-column align-items-center">
+            <img src="assets/fitness.jpg" class="img-fluid shadow mb-3 m-3" alt="Fitness">
+            <div class="information text-center">
+                <h4 class="font-weight-bold">FITNESS</h4>
+                <p class="text-muted"><i>Healthy and Energizing</i></p>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Mr. Brat</h5>
-              <p class="card-text">Cloud Engineer</p>
-              <hr>
-            </div>
-          </div>
         </div>
-        <div class="col-md-3">
-          <div class="card align-items-center">
-            <div class="card-image4">
-              <img src="assets/mrbrat.png" class="card-img-top mrbrat" alt="Mr. Brat">
+
+        <!-- Fourth Card -->
+        <div class="program-card col-md-3 d-flex flex-column align-items-center">
+          <div class="information text-center order-2 order-md-1">
+              <h4 class="font-weight-bold">SOCIAL WORK</h4>
+              <p class="text-muted"><i>Meaningful and Caring</i></p>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Mr. Brat</h5>
-              <p class="card-text">Cloud Engineer</p>
-              <hr>
-            </div>
-          </div>
-        </div>
+          <img src="assets/social-work.jpeg" class="img-fluid shadow mb-3 order-1 order-md-2 m-3" alt="Social Work">
       </div>
     </div>
-  </section>
+</div>
+</section>
+
+<!-- Mentors Section -->
+<section class="mentor-section">
+  <div class="slider-mentor w-100 hidden">
+      <!-- Radio inputs for controlling the slides -->
+      <input type="radio" name="mentor" id="t-1">
+      <input type="radio" name="mentor" id="t-2">
+      <input type="radio" name="mentor" id="t-3" checked>
+      <input type="radio" name="mentor" id="t-4">
+      <input type="radio" name="mentor" id="t-5">
+      <div class="mentors">
+          <!-- Static Overlay -->
+          <div class="static-overlay">
+              <h2>OUR MENTORS</h2>
+          </div>
+
+          <!-- Slides with images and captions -->
+          <label class="item" for="t-1">
+              <img src="assets/mentor.jpg" class="slide-img" alt="Brimstone">
+              <div class="slide-caption">
+                  <h3>Brimstone</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, eligendi!</p>
+              </div>
+          </label>
+
+          <label class="item" for="t-2">
+              <img src="assets/mentor.jpg" class="slide-img" alt="Cypher">
+              <div class="slide-caption">
+                  <h3>Cypher</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nesciunt.</p>
+              </div>
+          </label>
+
+          <label class="item" for="t-3">
+              <img src="assets/mentor.jpg" class="slide-img" alt="Fade">
+              <div class="slide-caption">
+                  <h3>Fade</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, doloribus!</p>
+              </div>
+          </label>
+
+          <label class="item" for="t-4">
+              <img src="assets/mentor.jpg" class="slide-img" alt="Killjoy">
+              <div class="slide-caption">
+                  <h3>Killjoy</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, culpa.</p>
+              </div>
+          </label>
+
+          <label class="item" for="t-5">
+              <img src="assets/mentor.jpg" class="slide-img" alt="Omen">
+              <div class="slide-caption">
+                  <h3>Omen</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nesciunt.</p>
+              </div>
+          </label>
+      </div>
+
+      <!-- Dots for navigation -->
+      <br />
+      <div class="dots">
+          <label for="t-1"></label>
+          <label for="t-2"></label>
+          <label for="t-3"></label>
+          <label for="t-4"></label>
+          <label for="t-5"></label>
+      </div>
+  </div>
+</section>
+
+<!-- Mentors -->
+<!-- <section class="mentor-section">
+  <div class="container py-5">
+    <div class="carousel-container position-relative">
+      
+        <div class="static-overlay">
+            <h2>OUR MENTORS</h2>
+        </div>
+
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner innercarousel">
+              
+                <div class="carousel-item  active">
+                    <img src="assets/mentor.jpg" class="d-block w-100" alt="The Den">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Brimstone</h3>
+                      <p>Lorem ipsum dolor</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="assets/mentor.jpg" class="d-block w-100" alt="Members' Lounge">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Cypher</h3>
+                      <p>Lorem ipsum dolor</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="assets/mentor.jpg" class="d-block w-100" alt="Providore">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Fade</h3>
+                      <p>Lorem ipsum dolor</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="assets/mentor.jpg" class="d-block w-100" alt="The Den">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Killjoy</h3>
+                    <p>Lorem ipsum dolor</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="assets/mentor.jpg" class="d-block w-100" alt="Providore">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Omen</h3>
+                      <p>Lorem ipsum, dolor</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Events Conducted -->
+<section id="events-conducted" class="py-5 pb-0">
+  <h2 class="text-center pb-3">Events Conducted</h2>
+  <div id="eventcarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-interval="300">
+        <img src="assets/fvision.jpg" class="d-block w-100 img-fluid vh-100" alt="...">
+      </div>
+      <div class="carousel-item" data-interval="300">
+        <img src="assets/fmission.jpg" class="d-block w-100 img-fluid vh-100" alt="...">
+      </div>
+      <div class="carousel-item" data-interval="300">
+        <img src="assets/event2.jpg" class="d-block w-100 img-fluid vh-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#eventcarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#eventcarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<!-- Application Process -->
+ <section class="application5">
+  <div class="container application-process pt-4 mb-3 w-100">
+    <h2>Application Process</h2>
+    <div class="d-flex gap-4 process-container justify-content-center hidden">
+        <div class="col-md-3 mb-4">
+            <div class="step">
+                <i class="fas fa-user-plus step-icon"></i>
+                <h4 class="step-title">Step 1: Sign Up</h4>
+                <p class="step-description">Register with your email and create an account.</p>
+                <div class="connector"></div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="step">
+                <i class="fas fa-user-edit step-icon"></i>
+                <h4 class="step-title">Step 2: Complete Profile</h4>
+                <p class="step-description">Fill in your personal and educational details.</p>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="step">
+                <i class="fas fa-book-open step-icon"></i>
+                <h4 class="step-title">Step 3: Choose Course</h4>
+                <p class="step-description">Select the course you want to enroll in.</p>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="step">
+                <i class="fas fa-chalkboard-teacher step-icon"></i>
+                <h4 class="step-title">Step 4: Start Learning</h4>
+                <p class="step-description">Access course materials and begin learning.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
 
 <!-- facilities and form -->
 <section class="facilities">
@@ -274,265 +427,80 @@
   </div>
 </section>
 
-<!-- Testimonials Section -->
-<section class="testimonials py-5">
-    <div class="container text-center">
-        <h2>Testimonials</h2>
-        <div class="container testimonials py-3">
-          <div id="testimonialCarousel" class="carousel">
-              <div class="carousel-inner pt-5 ">
-                  <div class="carousel-item active">
-                      <div class="card shadow-sm rounded-3">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="card shadow-sm rounded-3">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="card shadow-sm rounded-3">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="card shadow-sm rounded-3">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="card shadow-sm rounded-3">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="card shadow-sm rounded-3">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="card shadow-sm rounded-3">
-                          <div class="card-body testimonial-box position-relative p-4">
-                              <div class="testimonial-img mx-auto rounded-circle" style="background-image: url('assets/kishwar.png');"></div>
-                                  <h4 class="d-flex justify-content-between" style="margin-top: 20px;">
-                                      <span>Kishwar</span>
-                                      <span class="text-warning">★★★★★</span>
-                                  </h4>
-                                  <p>This handy tool helps you create dummy text for all your layout needs. We are gradually adding.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-        </div>
-    </div>
-</section>
-
-<!-- school collaboration -->
-<section class="school-collaboration py-5 pb-0 text-center">
-  <div class="container">
-    <h2>School collaboration</h2>
-    <div class="scroll-container scrollmenu">
-      <div class="my">
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="Gardenbook" class="img-fluid">
-          <p>Gardenbook</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="EDUBOOK" class="img-fluid">
-          <p>EDUBOOK</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="Chat Book" class="img-fluid">
-          <p>Chat Book</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="School4" class="img-fluid">
-          <p>School 4</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="School5" class="img-fluid">
-          <p>School 5</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
-          <p>Flying Book</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
-          <p>School 6</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
-          <p>School 7</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
-          <p>School 8</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
-          <p>Flying Book</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
-          <p>Flying Book</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
-          <p>Flying Book</p>
-        </div>
-        <div class="col-md-2 school">
-          <img src="assets/afs.png" alt="Flying Book" class="img-fluid">
-          <p>Flying Book</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Reach Us -->
-<section id="reach-us" class="py-5 bg-secondary-subtle">
-  <div>
-    <h2 class="pb-2 text-center">Reach Us</h2>
-    <div class="col-md-12 row py-5">
-      <div class="col-md-6 px-md-5">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.5046530416475!2d73.7153996733536!3d18.596357866858447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb8e4adef493%3A0xbf30286d3415a66e!2sVebsigns%20Technologies!5e0!3m2!1sen!2sin!4v1722591981038!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div class="col-md-6 form-column">
-        <form class="login-form rounded bg-secondary-subtle p-4 pb-5">
-            <div class="row">
-                <div class="form-group col-6 p-2">
-                    <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName">
-                </div>
-                <div class="form-group col-6 p-2">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-12 p-2">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email">
-                </div>
-            </div>
-            <div class="row pb-3">
-                <div class="form-group col-6 p-2 pb-0">
-                    <label for="phone">Phone no</label>
-                    <input type="text" class="form-control" id="phone">
-                </div>
-                <div class="form-group col-6 p-2 pb-0">
-                    <label for="course">Course</label>
-                    <input type="text" class="form-control" id="course">
-                </div>
-            </div>
-            <div class="row submit float-end">
-                <button type="submit" class="btn float-end text-white">Submit</button>
-            </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Footer Section -->
-  <footer class="footer text-white pt-5">
-    <div class="container">
+<!-- Footer Section -->
+<footer class="footer text-white pt-5">
+    <div class="container align-items-center">
       <div class="row">
-        <div class="col-md-3 align-items-center">
-
-          <div class="row"><img class="float-start" src="assets/falcovia.png" alt=""></div>
+        <div class="col-md-3 align-items-center mx-4">
+          <div class="row"><img class="float-start" src="assets/walcovia.png" alt=""></div>
             <div class="row">
-              <p>World largest online learning platform. Download our apps to start learning.</p>
+              <p>Download our apps to start learning.</p>
               <a href="tel:+91458654528" class="text-warning h5" data-toggle="tooltip" data-placement="top" title="Click to Call">Call Us - +91 458 654 528</a>
             </div>
         </div>
-        <div class="col-md-3">
-          <h5 class="text-warning">Trending Courses</h5>
-          <ul class="list-unstyled">
-            <li><a class="text-white" href="https://www.udemy.com" target="_blank">Study material</a></li>
-            <li><a class="text-white" href="https://www.udemy.com" target="_blank">Study material</a></li>
-            <li><a class="text-white" href="https://www.udemy.com" target="_blank">Study material</a></li>
-            <li><a class="text-white" href="https://www.udemy.com" target="_blank">Study material</a></li>
-          </ul>
+        <div class="col-md-6">
+          <div class="mt-4 mb-4 text-center">
+            <!-- Facebook -->
+            <a
+              target="_blank"
+              class="btn btn-link btn-floating btn-lg m-1"
+              href="#!"
+              role="button"
+              ><i class="bi bi-facebook"></i></a>
+      
+            <!-- X -->
+            <a
+              target="_blank"
+              class="btn btn-link btn-floating btn-lg m-1"
+              href="#!"
+              role="button"
+              ><i class="bi bi-twitter-x"></i></a>
+      
+            <!-- Google -->
+            <a
+              target="_blank"
+              class="btn btn-link btn-floating btn-lg m-1"
+              href="#!"
+              role="button"
+              ><i class="bi bi-google"></i></a>
+      
+            <!-- Instagram -->
+            <a
+              target="_blank"
+              class="btn btn-link btn-floating btn-lg m-1"
+              href="#!"
+              role="button"
+              ><i class="bi bi-instagram"></i></a>
+      
+            <!-- Linkedin -->
+            <a
+              target="_blank"
+              class="btn btn-link btn-floating btn-lg m-1"
+              href="#!"
+              role="button"
+              ><i class="bi bi-linkedin"></i></a>
+          </div>
         </div>
-        <div class="col-md-3">
-          <h5 class="text-warning">Study Material</h5>
-          <ul class="list-unstyled">
-            <li><a class="text-white" href="https://www.wikipedia.org" target="_blank">Study material</a></li>
-            <li><a class="text-white" href="https://www.wikipedia.org" target="_blank">Study material</a></li>
-            <li><a class="text-white" href="https://www.wikipedia.org" target="_blank">Study material</a></li>
-            <li><a class="text-white" href="https://www.wikipedia.org" target="_blank">Study material</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <h5 class="text-warning"  >Download Now</h5>
-          <a href="" target="_blank" data-toggle="tooltip" data-placement="top" title="Click to begin Download"><img src="assets/download.png" alt="Google Play" class="img-fluid">
+          <a href="#!" target="_blank" data-toggle="tooltip" data-placement="top" title="Click to begin Download"><img src="assets/download.png" alt="Google Play">
         </div>
       </div>
       <hr>
       <div class="copyright text-center p-3 pt-0 mb-0 h5">
-        Copyright © 2024 <a class="text-white" href="#">Alcovia.com</a> All Rights Reserved.
+        &copy;<a class="text-white" href="#">Alcovia.com</a> - All Rights Reserved.
       </div>
     </div>
-  </footer>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
 </script>
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
 
