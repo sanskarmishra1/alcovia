@@ -24,30 +24,7 @@ $(document).ready(function(){
     // offcanvas width
     document.getElementById("offcanvasNavbar").style.width = "350px";
     
-    
-    // Counter for Who we are
-    const counters = document.querySelectorAll('.count');
-    const speed = 200;
-  
-    const updateCounters = () => {
-        counters.forEach((counter) => {
-            const updateCount = () => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                const count = parseInt(counter.innerText);
-                const increment = Math.trunc(target / speed);
-
-                if (count < target) {
-                    counter.innerText = count + increment;
-                    setTimeout(updateCount, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            };
-            updateCount();
-        });
-    };
-    updateCounters();
-
+  // 
   const observer = new IntersectionObserver((entries)=>{
     entries.forEach((entry)=>{
       console.log(entry)
@@ -78,6 +55,21 @@ $(document).ready(function(){
   hiddenElements2.forEach((el)=> observer2.observe(el)); 
     
 
+    // new observer for caption
+    const observer3 = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        console.log(entry)
+        if(entry.isIntersecting){
+          entry.target.classList.add('unsam');
+        } 
+        else{
+          entry.target.classList.remove('unsam');
+        }
+      });
+    })
+    const hiddenElements3 = document.querySelectorAll('.sam');
+    hiddenElements3.forEach((el)=> observer3.observe(el)); 
+      
     // mouse-hover for button
     const $button = $('.submit');
     $button.on('mouseover', function() {
@@ -124,5 +116,20 @@ if (window.matchMedia("(min-width:576px)").matches) {
 // copying the school colaboration items
 var copy = document.querySelector(".logos-slide").cloneNode(true);
 document.querySelector(".logos").appendChild(copy);
+
+// mentor swiper
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 3,
+  spaceBetween: 60,
+  autoplay: {
+    delay: 7000,
+  },
+  loop: true,
+  centeredSlides: true, // Center the active slide
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 
 })
