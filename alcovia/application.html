@@ -29,16 +29,6 @@
     .nav-item:nth-child(3){
         transition-delay: 400ms;
     }
-    .step:nth-child(2){
-        transition-delay: 300ms;
-    }
-    .step:nth-child(3){
-        transition-delay: 600ms;
-    }
-    .step:nth-child(4){
-        transition-delay: 900ms;
-    }
-
     .brochure-section {
         background-color: beige;
         padding: 30px;
@@ -93,7 +83,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid d-flex align-items-center">
-        <div class="col-4 d-flex justify-content-start px-4">
+        <div class="col-4 d-flex justify-content-start ps-4">
             <!-- Togglebar Icon -->
             <a href="#" class="nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <img src="assets/togglebar.png" alt="Togglebar" height="20px">
@@ -101,15 +91,15 @@
         </div>
         <div class="col-4 text-center d-flex justify-content-center">
             <!-- Logo in the center -->
-            <a class="navbar-brand mx-auto" href="index.html" data-toggle="tooltip" data-placement="top" title="Alcovia">
+            <a class="navbar-brand mx-auto" href="#" data-toggle="tooltip" data-placement="top" title="Alcovia">
                 <img src="assets/alcovia.png" class="text-center" alt="Alcovia Logo">
             </a>
         </div>
         <div class="col-4 d-flex justify-content-end pe-4">
-            <a href="customerservice.html" class="nav-link">JOIN THE MOVEMENT</a>
+            <a href="application.html" class="nav-link join">JOIN THE MOVEMENT</a>
         </div>
     </div>
-</nav>
+  </nav>
 
 <!-- Offcanvas Sidebar -->
 <section>
@@ -148,30 +138,37 @@
 
 <!-- Application Process -->
 <section class="application">
-    <div class="container application-process">
+    <div class="container application-process pt-4 w-100">
       <h2>Application Process</h2>
-      <div class="d-flex gap-4 process-container justify-content-center">
-              <div class="step out col-3">
+      <div class="d-flex gap-4 process-container justify-content-center hidden">
+          <div class="col-md-3 mb-4">
+              <div class="step out">
                   <i class="fas fa-user-plus step-icon"></i>
                   <h4 class="step-title">Step 1: Sign Up</h4>
                   <p class="step-description">Register with your email and create an account.</p>
-                  <div class="connector"></div>
               </div>
-              <div class="step out col-3">
+          </div>
+          <div class="col-md-3 mb-4">
+              <div class="step out">
                   <i class="fas fa-user-edit step-icon"></i>
                   <h4 class="step-title">Step 2: Complete Profile</h4>
                   <p class="step-description">Fill in your personal and educational details.</p>
               </div>
-              <div class="step out col-3">
+          </div>
+          <div class="col-md-3 mb-4">
+              <div class="step out">
                   <i class="fas fa-book-open step-icon"></i>
                   <h4 class="step-title">Step 3: Choose Course</h4>
                   <p class="step-description">Select the course you want to enroll in.</p>
               </div>
-              <div class="step out col-3">
+          </div>
+          <div class="col-md-3 mb-4">
+              <div class="step out">
                   <i class="fas fa-chalkboard-teacher step-icon"></i>
                   <h4 class="step-title">Step 4: Start Learning</h4>
                   <p class="step-description">Access course materials and begin learning.</p>
               </div>
+          </div>
       </div>
     </div>
   </section>
@@ -179,7 +176,7 @@
 <div class="container brochure-section mt-5 hidden">
     <h3>Download Our Course Brochure</h3>
     <p>Get detailed information about our courses, instructors, and learning outcomes. Click the button below to download our comprehensive brochure.</p>
-    <a href="path/to/brochure.pdf" class="btn btn-success" download>Download Brochure</a>
+    <a href="assets/brochure.pdf" class="btn btn-success" download>Download Brochure</a>
 </div>
 
   
@@ -313,7 +310,7 @@
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script>
         $(document).ready(function () {
-            $('#contactForm').on('submit', function (e) {
+            $('.application-form').on('submit', function (e) {
                 e.preventDefault();
                 // Perform form validation or AJAX submission here
                 alert('Application Submitted successfully!');

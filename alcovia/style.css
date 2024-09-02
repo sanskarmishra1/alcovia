@@ -465,6 +465,7 @@ body {
 }
 .static-overlay h2{
   color: #E9DFCB;
+  font-size: 2rem !important;
 }
 .swiper-slide {
   text-align: center;
@@ -811,6 +812,14 @@ body {
   height: 16vh;
   margin: 0 40px;
 }
+
+@media (max-width: 768px) {
+  .logos-slide img {
+    height: 8vh;
+    margin: 0 20px;
+  }
+}
+
   /* Footer Section */
   .footer {
     background-color: #234944;
@@ -904,7 +913,9 @@ body {
     overflow: hidden;
     display: flex;
     align-items: center;
-    
+  }
+  .description{
+    text-align: justify;
   }
   /* Vision Mission */
   #vision-mission {
@@ -928,6 +939,7 @@ body {
     font-size: 1.2rem;
     height: 130px;
     margin-top: 8%;
+    text-align: justify;
   }
 
   /* Image Styles */
@@ -987,6 +999,19 @@ body {
 
     .section-title {
         margin-top: 20px;
+    }
+    .arch{
+      display: none;
+    }
+    .about-container{
+      flex-direction: column;
+      overflow: visible;
+    }
+    .about-container img{
+      width: 340px;
+    }
+    .mission-section img{
+      display: none;
     }
   }
 

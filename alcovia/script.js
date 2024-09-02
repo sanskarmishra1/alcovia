@@ -6,19 +6,21 @@ $(document).ready(function(){
     //     //   updateCounters();
     //     // }
     // })
-
-
+    
     // Loading animation 
-    gsap.fromTo(
-      ".loading-page",
-      { opacity: 1 },
-      {
-        opacity: 0,
-        display: "none",
-        duration: 1.5,
-        delay: 2,
-      }
-    );
+    window.onload = (event) => {
+      gsap.fromTo(
+        ".loading-page",
+        { opacity: 1 },
+        {
+          opacity: 0,
+          display: "none",
+          duration: 3,
+          delay: 2,
+        }
+      );
+      console.log("page is fully loaded");
+    };
 
 
     // offcanvas width
