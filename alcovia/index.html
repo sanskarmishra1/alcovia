@@ -31,7 +31,7 @@
         </div>
         <div class="col-4 text-center d-flex justify-content-center">
             <!-- Logo in the center -->
-            <a class="navbar-brand mx-auto" href="#" data-toggle="tooltip" data-placement="top" title="Alcovia">
+            <a class="navbar-brand mx-auto" href="index.html" data-toggle="tooltip" data-placement="top" title="Alcovia">
                 <img src="assets/alcovia.png" class="text-center" alt="Alcovia Logo">
             </a>
         </div>
@@ -87,7 +87,7 @@
         <div class="content text-center">
             <div class="wcontainer">
               <p class="ptext pipe">
-                A members’ only lifestyle club, where community, culture, and collaboration intersect to create The Quorum – The Third Dimension.
+                A members’ only lifestyle club, where community, culture, and collaboration intersect to create The Alcovia – Ahead of the Curve.
               </p>
               <br>
               <p class="ptext mt-5">
@@ -149,61 +149,61 @@
 
 <!-- Mentors Section -->
 <section class="mentor-section">
-<div class="swiper swiper-container container">
-  <div class="static-overlay">
-    <h2>OUR MENTORS</h2>
-  </div>
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper hidden">
-    <!-- Slides -->
-    <div class="swiper-slide">
-      <img src="assets/mentor.jpg" alt="mentor1">
-      <div class="slide-caption sam">
-        <h3>Brimstone</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, eligendi!</p>
-      </div>
+  <div class="swiper swiper-container container">
+    <div class="static-overlay">
+      <h2>OUR MENTORS</h2>
     </div>
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img src="assets/mentor.jpg" alt="mentor1">
+        <div class="slide-caption">
+          <h3>Brimstone</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, eligendi!</p>
+        </div>
+      </div>
 
-    <div class="swiper-slide">
-      <img src="assets/mentor.jpg" alt="mentor2">
-      <div class="slide-caption sam">
-        <h3>Cypher</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nesciunt.</p>
+      <div class="swiper-slide">
+        <img src="assets/mentor.jpg" alt="mentor2">
+        <div class="slide-caption">
+          <h3>Cypher</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nesciunt.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="swiper-slide">
-      <img src="assets/mentor.jpg" alt="mentor3">
-      <div class="slide-caption sam">
-        <h3>Fade</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, doloribus!</p>
+      <div class="swiper-slide">
+        <img src="assets/mentor.jpg" alt="mentor3">
+        <div class="slide-caption">
+          <h3>Fade</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, doloribus!</p>
+        </div>
       </div>
-    </div>
 
-    <div class="swiper-slide">
-      <img src="assets/mentor.jpg" alt="mentor4">
-      <div class="slide-caption sam">
-        <h3>Killjoy</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, culpa.</p>
+      <div class="swiper-slide">
+        <img src="assets/mentor.jpg" alt="mentor4">
+        <div class="slide-caption">
+          <h3>Killjoy</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, culpa.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="swiper-slide">
-      <img src="assets/mentor.jpg" alt="mentor5">
-      <div class="slide-caption sam">
-        <h3>Omen</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nesciunt.</p>
+      <div class="swiper-slide">
+        <img src="assets/mentor.jpg" alt="mentor5">
+        <div class="slide-caption">
+          <h3>Omen</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nesciunt.</p>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Pagination -->
-  <div class="swiper-pagination"></div>
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
   </div>
 </section>
 
 <!-- Events Conducted -->
 <section id="events-conducted" class="py-5 pb-0">
-  <div id="eventcarousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="eventcarousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active" data-interval="300">
         <img src="assets/fvision.jpg" class="d-block w-100 img-fluid vh-100" alt="...">
@@ -346,27 +346,32 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  const swiper = new Swiper('.swiper', {
-    breakpoints: {  
+const swiper = new Swiper('.swiper', {
+  breakpoints: {
     320: {
-      slidesPerView:1, 
-      spaceBetween:30, 
-     },
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
     640: {
       slidesPerView: 3,
-      spaceBetween: 60,
+      spaceBetween: 80,
     }
-    },
-    autoplay: {
-      delay: 7000,
-    },
-    loop: true,
-    centeredSlides: true, // Center the active slide
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
+  },
+  autoplay: {
+    delay: 7000,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  speed:800,
+  loop: true,
+  centeredSlides: true, // Center the active slide
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 </script>
 </body>
 </html>

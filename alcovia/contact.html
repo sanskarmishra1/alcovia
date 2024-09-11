@@ -100,7 +100,7 @@
         </div>
         <div class="col-4 text-center d-flex justify-content-center">
             <!-- Logo in the center -->
-            <a class="navbar-brand mx-auto" href="#" data-toggle="tooltip" data-placement="top" title="Alcovia">
+            <a class="navbar-brand mx-auto" href="index.html" data-toggle="tooltip" data-placement="top" title="Alcovia">
                 <img src="assets/alcovia.png" class="text-center" alt="Alcovia Logo">
             </a>
         </div>
@@ -178,39 +178,40 @@
 <div class="container">
   <h2 class="text-center pb-3">Send Us a Message</h2>
   <div class="contact-form mb-5 form-column">
-      <form id="contactForm">
-        <div class="row">
-          <div class="mb-3 col-4">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="firstName" required>
-          </div>
-          <div class="mb-3 col-4">
-          <label for="name" class="form-label">Last Name</label>
-          <input type="text" class="form-control" id="lastName" required>
-          </div>
-          <div class="mb-3 col-4">
-            <label for="name" class="form-label">Phone No</label>
-            <input type="tel" pattern="[0-9]{10}" class="form-control" id="Phone" required>
-            </div>
+    <form name="Contact Form" id="contactForm" method="POST" data-netlify="true" netlify>
+      <div class="row">
+        <div class="mb-3 col-4">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" required>
         </div>
-        <div class="row">
-          <div class="mb-3 col-6">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" required>
-          </div>
-          <div class="mb-3 col-6">
-            <label for="subject" class="form-label">Subject</label>
-            <input type="text" class="form-control" id="subject" required>
-          </div>
+        <div class="mb-3 col-4">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" name="lastName" required>
         </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="2" required></textarea>
+        <div class="mb-3 col-4">
+          <label for="Phone" class="form-label">Phone No</label>
+          <input type="tel" pattern="[0-9]{10}" class="form-control" id="Phone" name="Phone" required>
         </div>
-          <button type="submit" class="btn btn-success">Send Message</button>
-      </form>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-6">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3 col-6">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" class="form-control" id="subject" name="subject" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Send Message</button>
+    </form>
   </div>
 </div>
+
 
 
 <!-- Footer Section -->
@@ -296,13 +297,28 @@
       integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script>
-        $(document).ready(function () {
-            $('#contactForm').on('submit', function (e) {
-                e.preventDefault();
-                // Perform form validation or AJAX submission here
+$(document).ready(function () {
+    $('#contactForm').on('submit', function (e) {
+        // Prevent the default form submission behavior
+        e.preventDefault();
+
+        // Use AJAX to submit the form to Netlify Forms
+        $.ajax({
+            url: '/', // Netlify will handle the submission
+            method: 'POST',
+            data: $(this).serialize(),
+            success: function () {
                 alert('Message sent successfully!');
-            });
+                // Reset the form fields
+                $('#contactForm').trigger('reset');
+            },
+            error: function () {
+                alert('There was an error sending your message.');
+            }
         });
+    });
+});
+
     </script>
 </body>
 </html>

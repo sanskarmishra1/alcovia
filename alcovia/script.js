@@ -8,19 +8,26 @@ $(document).ready(function(){
     // })
     
     // Loading animation 
-    window.onload = (event) => {
+    window.addEventListener('load', (event) => {
+      // Start fading out the loading page and restore the scrollbar during the fade
       gsap.fromTo(
         ".loading-page",
         { opacity: 1 },
         {
           opacity: 0,
-          display: "none",
           duration: 3,
           delay: 2,
+          onStart: () => {
+            // Restore the scrollbar as soon as the fade-out starts
+            document.body.style.overflow = "auto";
+          },
+          onComplete: () => {
+            document.querySelector('.loading-page').style.display = "none";
+          }
         }
       );
-      console.log("page is fully loaded");
-    };
+    });
+  
 
 
     // offcanvas width
@@ -118,20 +125,5 @@ if (window.matchMedia("(min-width:576px)").matches) {
 // copying the school colaboration items
 var copy = document.querySelector(".logos-slide").cloneNode(true);
 document.querySelector(".logos").appendChild(copy);
-
-// mentor swiper
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 3,
-  spaceBetween: 60,
-  autoplay: {
-    delay: 7000,
-  },
-  loop: true,
-  centeredSlides: true, // Center the active slide
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
 
 })

@@ -91,7 +91,7 @@
         </div>
         <div class="col-4 text-center d-flex justify-content-center">
             <!-- Logo in the center -->
-            <a class="navbar-brand mx-auto" href="#" data-toggle="tooltip" data-placement="top" title="Alcovia">
+            <a class="navbar-brand mx-auto" href="index.html" data-toggle="tooltip" data-placement="top" title="Alcovia">
                 <img src="assets/alcovia.png" class="text-center" alt="Alcovia Logo">
             </a>
         </div>
@@ -184,35 +184,35 @@
     <div class="container mt-5">
         <h2 class="text-center mb-3">Apply Now</h2>
         <div class="application-form">
-            <form id="applicationForm form-column">
+            <form name="Application Form" id="applicationForm" method="POST" data-netlify="true">
                 <div class="row">
                     <div class="mb-3 col-6">
-                        <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="firstName" required>
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" required>
                     </div>
                     <div class="mb-3 col-6">
-                        <label for="name" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" required>
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3 col-6">
                         <label for="phone" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" required>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
                     </div>
                     <div class="mb-3 col-6">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3 col-6">
                         <label for="education" class="form-label">Educational Background</label>
-                        <textarea class="form-control" id="education" rows="1" required></textarea>
+                        <textarea class="form-control" id="education" name="education" rows="1" required></textarea>
                     </div>
                     <div class="mb-3 col-6">
                         <label for="course" class="form-label">Course Interested In</label>
-                        <select class="form-select" id="course" required>
+                        <select class="form-select" id="course" name="course" required>
                             <option selected disabled value="">Choose...</option>
                             <option value="course1">Course 1</option>
                             <option value="course2">Course 2</option>
@@ -225,6 +225,7 @@
         </div>
     </div>
 </section>
+
 
 <!-- Footer Section -->
 <footer class="footer text-white pt-5">
@@ -310,10 +311,24 @@
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script>
         $(document).ready(function () {
-            $('.application-form').on('submit', function (e) {
+            $('#applicationForm').on('submit', function (e) {
+                // Prevent the default form submission behavior
                 e.preventDefault();
-                // Perform form validation or AJAX submission here
-                alert('Application Submitted successfully!');
+
+                // Use AJAX to submit the form to Netlify Forms
+                $.ajax({
+                    url: '/', // Netlify will handle the submission
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    success: function () {
+                        alert('Application Submitted successfully!');
+                        // Reset the form fields
+                        $('#applicationForm').trigger('reset');
+                    },
+                    error: function () {
+                        alert('There was an error submitting your application.');
+                    }
+                });
             });
         });
       </script>
